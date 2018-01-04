@@ -35,7 +35,11 @@ const productsAtDayZero = [
 const carInsurance = new CarInsurance(productsAtDayZero);
 const format = process.env.FORMAT;
 
-console.log(daysFlow(30, carInsurance, format));
+if (process.env.PRINT) {
+  console.log(daysFlow(30, carInsurance, format));
+}
 
-
-
+module.exports = {
+  carInsurance,
+  daysFlow,
+}
