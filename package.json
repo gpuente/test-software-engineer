@@ -4,7 +4,9 @@
   "description": "ComparaOnline Software Engineer Test",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/*.js"
+    "test": "jest --verbose --coverage",
+    "start": "FORMAT=none node ./src/index.js",
+    "start:json": "FORMAT=json node ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/comparaonline/test-software-engineer#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "jest": "^22.0.4",
     "mocha": "^4.0.1"
   }
 }
